@@ -5,14 +5,17 @@
   <meta charset="utf-8">
   <title>My personnal site</title>
   <link rel="stylesheet" href="jarallax.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <section>
+    <div class="circle"></div>
     <header>
       <a href="#"><img src="img/logo.png" class="logo"></a>
-      <ul>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#">What's New</a></li>
@@ -22,14 +25,27 @@
     <div class="content">
       <div class="textBox">
         <h2>C'est mon site perso <br> Celui de <span> Loann Courcoul</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue mi eget nisl finibus vulputate. Curabitur eleifend nisi venenatis rutrum maximus. Fusce a accumsan sem. Aliquam erat volutpat. Sed malesuada ipsum eu augue vulputate, auctor bibendum mauris pulvinar. Phasellus aliquam ullamcorper eros, at pharetra leo luctus sed. Fusce ornare, diam sit amet volutpat sagittis, est nunc gravida velit, ut feugiat odio mi vel metus. Nam at felis iaculis, maximus velit ac, vulputate enim. Nulla quis pulvinar orci, eget porta nulla. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue mi eget nisl finibus vulputate. Curabitur eleifend nisi venenatis rutrum maximus. Fusce a accumsan sem. Aliquam erat volutpat. Sed malesuada ipsum eu augue vulputate,
+          auctor bibendum mauris pulvinar. Phasellus aliquam ullamcorper eros, at pharetra leo luctus sed. Fusce ornare, diam sit amet volutpat sagittis, est nunc gravida velit, ut feugiat odio mi vel metus. Nam at felis iaculis, maximus velit ac,
+          vulputate enim. Nulla quis pulvinar orci, eget porta nulla. </p>
         <a href="#">Learn More</a>
       </div>
+      <div class="imgBox">
+        <img src="img/logo.png" class="gameimage" alt="Splash It!">
+      </div>
     </div>
-    <div class="imgBox">
-      <img src="img/img1.png" class="gameimage" alt="Splash It!">
-    </div>
+    <ul class="thumb">
+      <li><img src="img/logo.png" onclick="imgSlider('img/logo.png');changeCircleColor('#017143')" alt="logo"></li>
+      <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.jpg');changeCircleColor('#eb7495')" alt="thumb1"></li>
+      <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.jpg');changeCircleColor('#d752b1')" alt="thumb1"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="img/facebook.png"></a></li>
+      <li><a href="https://twitter.com/CourcoulLoann"><img src="img/twitter.png"></a></li>
+      <li><a href="#"><img src="img/instagram.png"></a></li>
+    </ul>
   </section>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
