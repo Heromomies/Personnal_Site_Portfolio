@@ -24,11 +24,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Arial;
+  font-size: 20px;
 }
 
 header .logo {
   position: relative;
   max-width: 80px;
+  border-radius: 50%;
 }
 
 header ul {
@@ -45,6 +48,12 @@ header ul li a {
   color: #333;
   font-weight: 400;
   margin-left: 40px;
+  text-decoration: none;
+}
+header ul li a:hover
+{
+  text-decoration: underline;
+  color: #6e4681;
 }
 
 .content {
@@ -99,8 +108,12 @@ header ul li a {
 
 .content .imgBox img {
   max-width: 340px;
+  cursor: pointer;
 }
-
+.content .imgBox img:hover
+{
+  transform: translateY(-5px);
+}
 .thumb {
   position: absolute;
   left: 40%;
@@ -173,28 +186,7 @@ header ul li a {
   {
     font-size: 1.8em;
     margin: 5px 0;
-  }
-  .toggle
-  {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background: url(img/menu.png);
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: invert(1);
-      z-index: 11;
-  }
-  .toggle.active
-  {
-    position: fixed;
-    right: 20px;
-    background: url(img/close.png);
-    background-size: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #000000;
   }
   header ul.navigation.active
   {
@@ -209,6 +201,27 @@ header ul li a {
     flex-direction: column;
     background: #fff;
     z-index: 10;
+  }
+  .toggle
+  {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url("img/menu.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 11;
+  }
+  .toggle.active
+  {
+    position: fixed;
+    right: 20px;
+    background-image: url("img/close.png");
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   section
   {
